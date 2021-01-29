@@ -45,7 +45,7 @@ exports.login = async function (req, res) { // Criação de uruário
             return; // retornamos para fora de novo 
         }
 
-        req.flash('success', 'Você entro no sistema');
+        req.flash('success', 'Você entrou no sistema');
         req.session.user = login.user; // Abrindo uma sessão para o usuário
         req.session.save(function () { // Garantir que a sessão seja salva para depois voltar para página de login
             return res.redirect('back'); // Agora que a sessão foi salva e esta segura para eu voltar, eu vou redirecionar a página para onde ela veio.
