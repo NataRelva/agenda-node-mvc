@@ -8,8 +8,7 @@ mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifi
   .then(() => {// Promeça cumprida com sucesso pode sequir o fluxo desejado.
     app.emit('pronto');// Emite um sinal de pronto no formato broadcast
   })//
-  .catch(e => console.log(e)
-  console.log("Erro foi gerado aqui"));// Caso de algum erro quero saber em terminal o que hove.
+  .catch(e => console.log(e));// Caso de algum erro quero saber em terminal o que hove.
 
 //=================================================================================================
   
