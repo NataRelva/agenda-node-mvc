@@ -41,7 +41,8 @@ exports.editIndex = async function (req, res) {
 
 exports.edit = async function(req, res) { // Como vai trabalhar na BD entrão precisa ser asyncrono
   try {
-     if (!req.params.id) return res.render('404'); // Se não for enviado paramentro, já renderiza o erro 404
+     if (!req.params.id) return res.render('404'); // Se não for enviado paramentro
+     , já renderiza o erro 404
   const contato = new Contato(req.body);
   await contato.edit(req.params.id);
 
